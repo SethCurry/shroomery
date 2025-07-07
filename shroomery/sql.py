@@ -43,3 +43,15 @@ class SensorReading(Base):
     sensor: Mapped["Sensor"] = relationship("Sensor", back_populates="readings")
     reading_time: Mapped[datetime] = mapped_column(DateTime, nullable=False)
     reading_value: Mapped[float] = mapped_column(Float, nullable=False)
+
+
+class Profile(Base):
+    __tablename__ = "profiles"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    name: Mapped[str] = mapped_column(String, nullable=False, unique=True)
+    min_temperature: Mapped[float] = mapped_column(Float, nullable=False)
+    max_temperature: Mapped[float] = mapped_column(Float, nullable=False)
+    min_humidity: Mapped[float] = mapped_column(Float, nullable=False)
+    max_humidity: Mapped[float] = mapped_column(Float, nullable=False)
+    active: Mapped[bool] = mapped_column(Boolean, nullable=False)
