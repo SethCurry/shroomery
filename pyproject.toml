@@ -9,6 +9,7 @@ dependencies = [
     "fastapi>=0.115.14",
     "psycopg2>=2.9.10",
     "pydantic>=2.11.7",
+    "sensirion-i2c-sht4x>=1.1.0",
     "sqlalchemy>=2.0.41",
     "structlog>=25.4.0",
     "uvicorn[standard]>=0.34.0",

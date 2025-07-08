@@ -15,12 +15,14 @@ import enum
 class Base(DeclarativeBase):
     pass
 
+
 class Pin(Base):
     __tablename__ = "pins"
 
     pin_number: Mapped[int] = mapped_column(Integer, primary_key=True)
     sensor_id: Mapped[int] = mapped_column(Integer, ForeignKey("sensors.id"))
     sensor: Mapped["Sensor"] = relationship("Sensor", back_populates="pins")
+
 
 class SensorType(enum.Enum):
     SHT45 = "sht45"
@@ -42,22 +44,29 @@ class Sensor(Base):
     pins: Mapped[list["Pin"]] = relationship("Pin", back_populates="sensor")
 
     # The readings associated with the sensor
-    readings: Mapped[list["SensorReading"]] = relationship("SensorReading", back_populates="sensor")
+    readings: Mapped[list["SensorReading"]] = relationship(
+        "SensorReading", back_populates="sensor"
+    )
 
 
 class SensorReadingType(enum.Enum):
     TEMPERATURE = "temperature"
     HUMIDITY = "humidity"
 
+
 class SensorReading(Base):
     __tablename__ = "sensor_readings"
 
-    reading_type: Mapped[SensorReadingType] = mapped_column(Enum(SensorReadingType), nullable=False, primary_key=True)
+    reading_type: Mapped[SensorReadingType] = mapped_column(
+        Enum(SensorReadingType), nullable=False, primary_key=True
+    )
     sensor_id: Mapped[int] = mapped_column(
         Integer, ForeignKey("sensors.id"), nullable=False, primary_key=True
     )
     sensor: Mapped["Sensor"] = relationship("Sensor", back_populates="readings")
-    reading_time: Mapped[datetime] = mapped_column(DateTime, nullable=False, primary_key=True)
+    reading_time: Mapped[datetime] = mapped_column(
+        DateTime, nullable=False, primary_key=True
+    )
     reading_value: Mapped[float] = mapped_column(Float, nullable=False)
 
 

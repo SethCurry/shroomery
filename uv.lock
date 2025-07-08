@@ -229,6 +229,15 @@ wheels = [
 ]
 
 [[package]]
+name = "intelhex"
+version = "2.3.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/66/37/1e7522494557d342a24cb236e2aec5d078fac8ed03ad4b61372586406b01/intelhex-2.3.0.tar.gz", hash = "sha256:892b7361a719f4945237da8ccf754e9513db32f5628852785aea108dcd250093", size = 44513, upload-time = "2020-10-20T20:35:51.526Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/97/78/79461288da2b13ed0a13deb65c4ad1428acb674b95278fa9abf1cefe62a2/intelhex-2.3.0-py2.py3-none-any.whl", hash = "sha256:87cc5225657524ec6361354be928adfd56bcf2a3dcc646c40f8f094c39c07db4", size = 50914, upload-time = "2020-10-20T20:35:50.162Z" },
+]
+
+[[package]]
 name = "psycopg2"
 version = "2.9.10"
 source = { registry = "https://pypi.org/simple" }
@@ -362,6 +371,82 @@ wheels = [
 ]
 
 [[package]]
+name = "sensirion-driver-adapters"
+version = "2.3.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "sensirion-i2c-driver" },
+    { name = "sensirion-shdlc-driver" },
+    { name = "sensirion-shdlc-sensorbridge" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/8f/81/d214c71437d68ca1a95842308ffa5dd5cadbd7205715920c8849075550dc/sensirion-driver-adapters-2.3.0.tar.gz", hash = "sha256:a54ec96146807cf3217791d2d171177a4de8586cb78c65c57a072ed8d1889afa", size = 20974, upload-time = "2025-04-16T07:13:40.745Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/6e/7c/9f1d3cfd7123f6472d92d40ef22071d6e0358c65e877d0dcc80a5279cee9/sensirion_driver_adapters-2.3.0-py3-none-any.whl", hash = "sha256:121de971658d5cce3421d4202dcc2c3e4ba8e2d483ce766402d3ce12805ee3be", size = 30289, upload-time = "2025-04-16T07:13:39.22Z" },
+]
+
+[[package]]
+name = "sensirion-driver-support-types"
+version = "0.2.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d7/f0/a3c68c1a515ba77fa179fbcc4d5855fbc30d02a9ad2f2a233a69bd76e43e/sensirion-driver-support-types-0.2.0.tar.gz", hash = "sha256:610e032ec06de4600e48b5dacf4eb72cea272b1a8f01e7a71b678ea390777133", size = 4454, upload-time = "2022-11-23T10:43:22.975Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/fc/da/53034bee38f6628049038ae3c919a3201990deba567de4cddc2e2231a2ec/sensirion_driver_support_types-0.2.0-py3-none-any.whl", hash = "sha256:cd1ca0427d8e5335118d6b116fbd06d61e4f8c77717545734b7bdc08fd320695", size = 5807, upload-time = "2022-11-23T10:43:20.953Z" },
+]
+
+[[package]]
+name = "sensirion-i2c-driver"
+version = "1.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ce/f1/4f93888437ad878e618556c6effe4006f36444a7ff1342759987ac6eefdb/sensirion-i2c-driver-1.0.0.tar.gz", hash = "sha256:c066abaddf0b9f0dea9d9e8699e7864147ef2df9279ee70e14bed7fbc0a4d699", size = 11264, upload-time = "2020-08-28T15:45:37.166Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/65/a7/bd324496e4b4823aafcf0aaa07564f18ca92aba5e8d5c4cbfd2d1d52d6ba/sensirion_i2c_driver-1.0.0-py3-none-any.whl", hash = "sha256:2b71b033904454e9e7e9883215b26ced14fe3ddeba17b1f5f51f1b461ec23d9b", size = 16410, upload-time = "2020-08-28T15:45:35.877Z" },
+]
+
+[[package]]
+name = "sensirion-i2c-sht4x"
+version = "1.1.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "sensirion-driver-adapters" },
+    { name = "sensirion-driver-support-types" },
+    { name = "sensirion-i2c-driver" },
+    { name = "sensirion-shdlc-sensorbridge" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/2b/7b/e84b7560869fcf4e2cb8e5157af508b0e83bd64cf8d0fe7df2691456e52a/sensirion_i2c_sht4x-1.1.0.tar.gz", hash = "sha256:fcb0acaaf2cebb7618deb4d134fcb68945f803ee33058436105cfbc93d019458", size = 7601, upload-time = "2024-04-11T14:36:46.763Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a3/e9/eff074ed4c32e0ec8b0c825174b780b3763ee6776aaf933488277888c493/sensirion_i2c_sht4x-1.1.0-py3-none-any.whl", hash = "sha256:6a605f8cddd4ed0c7bda64b09ce3daf8184c72f662e55123b38054424df4bc61", size = 8354, upload-time = "2024-04-11T14:36:44.951Z" },
+]
+
+[[package]]
+name = "sensirion-shdlc-driver"
+version = "0.1.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pyserial" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/1d/c7/a46bef53eeb82ed239fcaba649e91b7d308fa8de4338781433a425c01374/sensirion-shdlc-driver-0.1.5.tar.gz", hash = "sha256:91ff6e5430a639f1dc4c03949e1df6f38b6d3249848fa095701c8ba1f016e5f8", size = 21202, upload-time = "2020-08-11T15:05:15.103Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/06/cf/42b3039a9c264328d49b89379326259c605955e95cdb66ad8f9a528fdcb2/sensirion_shdlc_driver-0.1.5-py3-none-any.whl", hash = "sha256:1a94514944fad215dd65db6812b55c92d4e578a17b7614bf9553f7c672d0660c", size = 33182, upload-time = "2020-08-11T15:05:13.786Z" },
+]
+
+[package.optional-dependencies]
+fwupdate = [
+    { name = "intelhex" },
+]
+
+[[package]]
+name = "sensirion-shdlc-sensorbridge"
+version = "0.2.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "sensirion-shdlc-driver", extra = ["fwupdate"] },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6b/f1/466d2b81a8ac6aa40642a452ef949efbceafdac02c9ef180cd13e040e3d4/sensirion-shdlc-sensorbridge-0.2.0.tar.gz", hash = "sha256:032be4047a965a6d5955b3ff9fc877eb750c3905dbb2f59b6672e5ad15001043", size = 18665, upload-time = "2023-10-03T11:51:47.119Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f9/62/df4be6b37504a42642d2694c2a62ae3b1c19abd4f15a9ca9d1bba24840ef/sensirion_shdlc_sensorbridge-0.2.0-py3-none-any.whl", hash = "sha256:add95af1fd5a7142884f1f3597dc0aeab5ec344c6139f0434852455226fdd12b", size = 38789, upload-time = "2023-10-03T11:51:44.624Z" },
+]
+
+[[package]]
 name = "shroomery"
 version = "0.1.0"
 source = { virtual = "." }
@@ -370,6 +455,7 @@ dependencies = [
     { name = "fastapi" },
     { name = "psycopg2" },
     { name = "pydantic" },
+    { name = "sensirion-i2c-sht4x" },
     { name = "sqlalchemy" },
     { name = "structlog" },
     { name = "uvicorn", extra = ["standard"] },
@@ -386,6 +472,7 @@ requires-dist = [
     { name = "fastapi", specifier = ">=0.115.14" },
     { name = "psycopg2", specifier = ">=2.9.10" },
     { name = "pydantic", specifier = ">=2.11.7" },
+    { name = "sensirion-i2c-sht4x", specifier = ">=1.1.0" },
     { name = "sqlalchemy", specifier = ">=2.0.41" },
     { name = "structlog", specifier = ">=25.4.0" },
     { name = "uvicorn", extras = ["standard"], specifier = ">=0.34.0" },
