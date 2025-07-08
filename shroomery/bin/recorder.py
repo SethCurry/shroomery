@@ -4,7 +4,6 @@ from sensirion_i2c_driver import LinuxI2cTransceiver, I2cConnection, CrcCalculat
 from sensirion_driver_adapters.i2c_adapter.i2c_channel import I2cChannel
 from sensirion_i2c_sht4x.device import Sht4xDevice
 
-
 def main():
     logger = get_logger()
 
