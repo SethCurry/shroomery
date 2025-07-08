@@ -1,6 +1,5 @@
-def main():
-    print("Hello from shroomery!")
-
+import uvicorn
+from shroomery.api import app
 
 if __name__ == "__main__":
-    main()
+    uvicorn.run(app, host="0.0.0.0", port=8000)

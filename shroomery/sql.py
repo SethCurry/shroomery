@@ -1,6 +1,4 @@
 from sqlalchemy import (
-    create_engine,
-    Column,
     Integer,
     String,
     DateTime,
@@ -32,11 +30,14 @@ class Sensor(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     name: Mapped[str] = mapped_column(String, nullable=False, unique=True)
     sensor_type: Mapped[SensorType] = mapped_column(Enum(SensorType), nullable=False)
+    
+    readings: Mapped[list["SensorReading"]] = relationship("SensorReading", back_populates="sensor")
 
 
 class SensorReading(Base):
     __tablename__ = "sensor_readings"
 
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
     sensor_id: Mapped[int] = mapped_column(
         Integer, ForeignKey("sensors.id"), nullable=False
     )
