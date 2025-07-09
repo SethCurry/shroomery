@@ -1,0 +1,8 @@
+- Create recorder process
+  - Add SHT45 recorder
+  - Add some kind of CO2 sensor
+  - Substrate sensor?
+- Create manager process
+  - Toggle heater/cooler on/off based on recent temperatures
+  - Toggle humidifer/dehumidifier on/off based on recent humidity
+- Should recorder and manager be the same process so manager has access to live data?
